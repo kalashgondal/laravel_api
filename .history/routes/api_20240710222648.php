@@ -14,3 +14,9 @@ Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api\V1'], f
     Route::apiResource('customers', CustomerController::class);
     Route::apiResource('invoices', InvoiceController::class);
 });
+
+Route::get('/v1/test', function () {
+    return response()->json(['message' => 'GET all customers']);
+});
+
+Route::apiResource('products', CustomerController::class);
